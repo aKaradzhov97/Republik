@@ -1,0 +1,153 @@
+.site-logo {
+    width: 22rem;
+    height: auto;
+}
+
+i.fa-times,
+i.fa-bars {
+    color: #444;
+}
+
+.site-header {
+    display: flex;
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-main ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+.nav-main ul li {
+    list-style: none outside;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-main ul li a {
+    text-decoration: none;
+    color: #E30117;
+    margin: 0 0.75rem;
+    transition: 0.15s;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+#main-nav-toggle:checked + header .nav-main {
+    display: block;
+    margin-top: 0;
+    position: relative;
+    top: 6.5rem;
+}
+
+#main-nav-toggle:checked + header .nav-main.right {
+    margin-bottom: 6.5rem;
+}
+
+#main-nav-toggle:checked + header #toggle .fa-times {
+    display: block;
+}
+
+#main-nav-toggle:checked + header #toggle .fa-bars {
+    display: none;
+}
+
+#main-nav-toggle:checked + header .site-branding {
+    position: absolute;
+    top: 0;
+}
+
+#main-nav-toggle {
+    display: none;
+}
+
+#times-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 980px){
+    .site-header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .site-logo {
+        width: 16rem;
+    }
+
+    .nav-main {
+        display: none;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .nav-main ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-main ul li {
+        width: 100%;
+    }
+
+    .nav-main ul li a {
+        margin: 0;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    #toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        padding: 1rem;
+        color: #FFF;
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 980px){
+    #toggle {
+        display: none;
+    }
+
+    .site-header .nav-main ul li a:after,
+    .site-header .nav-main ul li a:before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: #E30117;
+        content: '';
+        opacity: 0;
+        transition: opacity .15s, transform .15s;
+    }
+
+    .site-header .nav-main ul li a:before {
+        top: 0;
+    }
+
+    .site-header .nav-main ul li a:after {
+        bottom: 0;
+    }
+
+    .site-header .nav-main ul li a:hover::before {
+        top: 0;
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+
+    .site-header .nav-main ul li a:hover::after {
+        bottom: 0;
+        transform: translateY(10px);
+        opacity: 1;
+    }
+}
