@@ -37,14 +37,16 @@
 }
 
 .post-link {
-    border: 1px solid #222;
     padding: 0.5rem;
     text-decoration: none;
-    color: #222;
     transition: 0.1s ease;
+    background: #222;
+    color: white;
+    border: 1px solid #222;
 }
 
 .post-link:hover {
-    background: #222;
-    color: white;
+    background: #fff;
+    color: #222;
+    border: 1px solid #222;
 }

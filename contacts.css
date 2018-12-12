@@ -2,7 +2,7 @@
     background: url('./images/contact-us.jpg');
     background-size: cover;
     background-position: center;
-    padding: 8rem;
+    padding: 11rem 0;
 }
 
 .inner-contacts {
@@ -65,4 +65,32 @@ ul.contacts li .contact i {
 
 .contact > .fa-envelope {
     color: gold;
+}
+
+@media screen and (max-width: 850px) {
+    .contacts-image {
+        padding: 8rem 0;
+    }
+
+    ul.contacts {
+        justify-content: space-around;
+    }
+
+    ul.contacts li {
+        flex: 0 0 50%;
+    }
+
+    ul.contacts li:last-child {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .contacts-image {
+        padding: 5rem 0;
+    }
+
+    ul.contacts li {
+        flex-basis: 100%;
+    }
 }
