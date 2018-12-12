@@ -4,8 +4,11 @@
     font-size: 1.7rem;
     color: #FFFFFF;
     text-shadow: 2px 2px 11px #0D0000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     position: relative;
-    top: -5rem;
+    bottom: 9rem;
 }
 
 .menu-page-image {
@@ -51,4 +54,18 @@
 .menu-list article a:focus {
     color: #FFF;
     background-color: #EF0C0C;
+}
+
+@media all and (max-width: 620px) {
+    .menu-list article {
+        flex: 0 0 30%;
+    }
+
+    .menu-section-title {
+        bottom: 6rem;
+    }
+
+    .menu-page-image {
+        padding: 8rem;
+    }
 }
