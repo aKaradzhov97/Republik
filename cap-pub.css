@@ -2,7 +2,10 @@
     background: url('./images/Berlin.jpg');
     background-size: cover;
     background-position: center;
-    padding: 11rem;
+    padding: 11rem 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .cappub-section-title,
@@ -15,13 +18,13 @@
 }
 
 .cappub-section-title {
-    bottom: 7rem;
-    left: 2rem;
+    bottom: 9rem;
+    left: 10rem;
 }
 
 .city-name {
-    right: 4rem;
-    bottom: 3rem;
+    left: 10rem;
+    bottom: 5rem;
 }
 
 .intro-info {
@@ -53,7 +56,7 @@
 }
 
 .intext ul li  {
-    width: 30%;
+    width: 25%;
     display: flex;
     list-style: none outside;
     height: 100%;
@@ -121,14 +124,16 @@
 .beer-market-image {
     background: url('./images/beer-market.png');
     background-size: cover;
-    padding-top: 2rem;
-    padding-bottom: 7rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 0;
 }
 
 .beer-market-image article {
     display: inline-block;
-    padding: 2rem 6.5rem;
+    padding: 2rem 5.5rem;
     background: #000;
     opacity: 0.65;
 }
@@ -162,3 +167,40 @@
     transform: scale(1.075);
     opacity: 1;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width: 1050px) {
+    .berlin-image {
+        padding: 9rem 0;
+    }
+
+    .intro-info  article {
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .berlin-image {
+        padding: 6rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cappub-section-title,
+    .city-name {
+        position: static;
+        display: block;
+    }
+
+    .beer-market-image {
+        padding: 0;
+    }
+
+    .intext ul li  {
+        width: 90%;
+    }
+}
+
