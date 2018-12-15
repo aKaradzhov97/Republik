@@ -23,9 +23,9 @@ function textLimiter() {
 // TextLimiter is used in News Feed.
 
 function onDocumentLoad(titleOfDocument) {
-    if (titleOfDocument === 'Reservation') {
+    if (titleOfDocument === 'Berliner Republik - Reservation') {
         getDate();
-    } else if (titleOfDocument === 'News'){
+    } else if (titleOfDocument === 'Berliner Republik - News'){
         textLimiter();
     }
 }
