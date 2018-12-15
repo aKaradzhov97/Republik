@@ -1,5 +1,5 @@
 .contacts-image {
-    background: url('./images/contact-us.jpg');
+    background: url('./../images/contact-us.jpg');
     background-size: cover;
     background-position: center;
     padding: 11rem 0;

@@ -1,5 +1,5 @@
 .image {
-    background: url('./images/Gastraum-mit-Leinwand.jpg');
+    background: url('./../images/Gastraum-mit-Leinwand.jpg');
     background-size: cover;
     background-position: center;
     padding: 8rem;

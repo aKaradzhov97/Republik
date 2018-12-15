@@ -1,5 +1,5 @@
 .news-image {
-    background: url('./images/news-banner.jpg');
+    background: url('./../images/news-banner.jpg');
     background-size: cover;
     background-position: center;
     padding: 11rem;

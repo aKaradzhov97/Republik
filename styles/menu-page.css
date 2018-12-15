@@ -1,3 +1,10 @@
+.menu-page-image {
+    background: url('./../images/menu-page.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 11rem;
+}
+
 .menu-section-title {
     text-align: center;
     text-transform: uppercase;
@@ -9,13 +16,6 @@
     align-items: flex-start;
     position: relative;
     bottom: 9rem;
-}
-
-.menu-page-image {
-    background: url('./images/menu-page.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 11rem;
 }
 
 .menu-list {

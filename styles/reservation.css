@@ -1,5 +1,5 @@
 .reserved-image {
-    background: url('./images/reserved.jpg');
+    background: url('./../images/reserved.jpg');
     background-size: cover;
     background-position: bottom;
     padding: 11rem;
