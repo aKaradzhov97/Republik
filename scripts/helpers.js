@@ -1,5 +1,7 @@
 function getDate() {
+    let today = new Date().toISOString().split('T')[0];
     document.getElementById("reserveDate").valueAsDate = new Date();
+    document.getElementById("reserveDate").setAttribute('min', today);
 }
 
 // GetDate is used in Reservation.
