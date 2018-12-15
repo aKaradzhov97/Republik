@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ site.title }} {% if page.title != "Home" %} - {{ page.title }}{% endif %}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/styles/styles.css">
+    <script src="{{ site.baseurl }}/scripts/helpers.js"></script>
 
     <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/images/favicon/favicon-32x32.png">
@@ -17,7 +18,7 @@
     <meta name="msapplication-config" content="{{ site.baseurl }}/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
 </head>
-<body>
+<body onload="onDocumentLoad()">
     <input type="checkbox" name="main-nav-toggle" id="main-nav-toggle">
     <header class="site-header">
         <nav class="nav-main left">

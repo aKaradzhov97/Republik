@@ -4,6 +4,7 @@ function getDate() {
 
 // GetDate is used in Reservation.
 
+
 function textLimiter() {
     let elements = document.getElementsByClassName("post-content");
     let elementLinks = document.getElementsByClassName("post-link");
@@ -20,3 +21,11 @@ function textLimiter() {
 }
 
 // TextLimiter is used in News Feed.
+
+function onDocumentLoad(titleOfDocument) {
+    if (titleOfDocument === 'Reservation') {
+        getDate();
+    } else if (titleOfDocument === 'News'){
+        textLimiter();
+    }
+}
