@@ -1,0 +1,96 @@
+.contacts-image {
+    background: url('./../images/contact-us.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 11rem 0;
+}
+
+.inner-contacts {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 1rem;
+}
+
+ul.contacts {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul.contacts li {
+    list-style-type: none;
+    padding: 0.5rem 0.2rem;
+    margin: 0;
+    flex: 0 0 30%;
+}
+
+ul.contacts li .contact {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background: transparent;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+ul.contacts li .contact i {
+    display: block;
+    font-size: 5rem;
+    position: relative;
+}
+
+.contact-description {
+    text-align: center;
+    position: relative;
+}
+
+.contact-description .desc-head {
+    font-weight: bold;
+}
+
+.contact-description p.desc {
+    line-height: 0.25;
+}
+
+.contact > .fa-map-marker-alt {
+    color: rgb(50, 105, 200);
+}
+
+.contact > .fa-phone {
+    color: green;
+}
+
+.contact > .fa-envelope {
+    color: gold;
+}
+
+@media screen and (max-width: 850px) {
+    .contacts-image {
+        padding: 8rem 0;
+    }
+
+    ul.contacts {
+        justify-content: space-around;
+    }
+
+    ul.contacts li {
+        flex: 0 0 50%;
+    }
+
+    ul.contacts li:last-child {
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .contacts-image {
+        padding: 5rem 0;
+    }
+
+    ul.contacts li {
+        flex-basis: 100%;
+    }
+}
