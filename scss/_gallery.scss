@@ -9,79 +9,83 @@
     text-align: center;
     padding: 1rem 0;
     background-color: #f8f7f9;
-}
 
-.gallery ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 70rem;
-    margin: 0 auto;
-}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 60rem;
+        margin: 0 auto;
+    }
 
-.gallery ul li  {
-    width: 100%;
-    display: flex;
-    list-style: none outside;
-    height: 100%;
-    flex-direction: column;
-    padding: 0.2rem;
-    margin: 1rem;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
-}
+    li  {
+        width: 100%;
+        display: flex;
+        list-style: none outside;
+        height: 100%;
+        flex-direction: column;
+        padding: 0.2rem;
+        margin: 1rem;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
 
-.gallery ul li:hover {
-    box-shadow: 0 0 6px 0 rgba(0,0,0,0.85);
-    cursor: pointer;
-}
+        &:hover {
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.85);
+            cursor: pointer;
+        }
+    }
 
-.gallery ul li .card-media {
-    position: relative;
-    overflow: hidden;
-    background-color: #000;
-}
+    .card-media {
+        position: relative;
+        overflow: hidden;
+        background-color: #000;
 
-.gallery ul li .card-media:after {
-    display: block;
-    content: '';
-    padding-top: 56.25%;
-}
+        &:after {
+            display: block;
+            content: '';
+            padding-top: 56.25%;
+        }
 
-.gallery ul li .card-media img {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    transform: rotate(0) scale(1);
-    transition: 0.4s ease;
-}
+        img {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            transform: rotate(0) scale(1.05);
+            transition: 0.4s ease;
+        }
 
-.gallery ul li .card-media img:hover {
-    transform: rotate(5deg) scale(1.1);
-}
+        img:hover {
+            transform: rotate(5deg) scale(1.15);
+        }
+    }
 
-.gallery ul li .card-desc {
-    margin-top: 0.5rem;
-    color: #333;
+    .card-desc {
+        margin-top: 0.5rem;
+        color: #333;
+    }
 }
 
 /* Responsive */
 
 @media all and (min-width: 600px){
-    .gallery ul li {
-        width: 45%;
+    .gallery {
+        li {
+            width: 45%;
+        }
     }
 }
 
 @media all and (min-width: 980px){
     .image {
-        padding: 11rem;
+        padding: $top-section-image-pad;
     }
 
-    .gallery ul li {
-        width: 30%;
+    .gallery {
+        li {
+            width: 30%;
+        }
     }
 }

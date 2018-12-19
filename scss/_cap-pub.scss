@@ -2,14 +2,13 @@
     background: url('./../images/Berlin.jpg');
     background-size: cover;
     background-position: center;
-    padding: 11rem 0;
+    padding: $top-section-image-pad 0;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.cappub-section-title,
-.city-name {
+@mixin capital-pub-section-title {
     display: inline-block;
     font-size: 1.7rem;
     color: #FFFFFF;
@@ -17,26 +16,32 @@
     position: relative;
 }
 
+.cappub-section-title,
+.city-name {
+    @include capital-pub-section-title;
+}
+
+$cap-pub-section-left: 12rem;
 .cappub-section-title {
     bottom: 9rem;
-    left: 10rem;
+    left: $cap-pub-section-left;
 }
 
 .city-name {
-    left: 10rem;
     bottom: 5rem;
+    left: $cap-pub-section-left;
 }
 
 .intro-info {
     text-align: center;
     padding: 1rem 0;
     background-color: #f8f7f9;
-}
 
-.intro-info article {
-    max-width: 60rem;
-    margin: 0 auto;
-    text-align: left;
+    article {
+        max-width: $section-max-width;
+        margin: 0 auto;
+        text-align: left;
+    }
 }
 
 /*Interior & Exterior sections*/
@@ -44,79 +49,79 @@
     text-align: center;
     padding: 1rem 0;
     background-color: #f8f8f8;
-}
 
-.intext ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    max-width: 65rem;
-    margin: 0 auto;
-}
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        max-width: $section-max-width + 5rem;
+        margin: 0 auto;
+    }
 
-.intext ul li  {
-    width: 25%;
-    display: flex;
-    list-style: none outside;
-    height: 100%;
-    flex-direction: column;
-    padding: 0.2rem;
-    margin: 1rem;
-    box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
-}
+    li  {
+        width: 25%;
+        display: flex;
+        list-style: none outside;
+        height: 100%;
+        flex-direction: column;
+        padding: 0.2rem;
+        margin: 1rem;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.75);
 
-.intext ul li:hover {
-    box-shadow: 0 0 6px 0 rgba(0,0,0,0.85);
-    cursor: pointer;
-}
+        &:hover {
+            box-shadow: 0 0 6px 0 rgba(0,0,0,0.85);
+            cursor: pointer;
+        }
+    }
 
-.intext ul li .card-media {
-    position: relative;
-    overflow: hidden;
-    background-color: #000;
-}
+    .card-media {
+        position: relative;
+        overflow: hidden;
+        background-color: #000;
 
-.intext ul li .card-media:after {
-    display: block;
-    content: '';
-    padding-top: 56.25%;
-}
+        &:after {
+            display: block;
+            content: '';
+            padding-top: 56.25%;
+        }
 
-.intext ul li .card-media img {
-    display: block;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: auto;
-    transform: scale(1);
-    transition: 0.4s ease;
-}
+        img {
+            display: block;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            transform: scale(1);
+            transition: 0.4s ease;
+        }
 
-.intext ul li .card-media img:hover {
-    transform: scale(1.05);
+        img:hover {
+            transform: scale(1.05);
+        }
+    }
 }
 
 #interior-section {
     background: #B10200;
     color: #fff;
-}
 
-#interior-section h2 {
-    color: #fff;
-}
+    h2 {
+        color: #fff;
+    }
 
-#interior-section ul li {
-    background: #f8f8f8;
-}
+    .section-title:after {
+        border-bottom: 2px solid #f8f8f8;
+    }
 
-#interior-section .section-desc {
-    opacity: 1;
-}
+    .section-desc {
+        opacity: 1;
+    }
 
-#interior-section .section-title:after {
-    border-bottom: 2px solid #f8f8f8;
+    li {
+        background: #f8f8f8;
+    }
 }
 
 /*End of Interior & Exterior sections*/
@@ -129,45 +134,44 @@
     justify-content: center;
     align-items: center;
     padding: 4.5rem 0;
-}
 
-.beer-market-image article {
-    display: inline-block;
-    padding: 2rem 5.5rem;
-    background: #000;
-    opacity: 0.65;
-}
+    article {
+        display: inline-block;
+        padding: 2rem 5.5rem;
+        background: #000;
+        opacity: 0.65;
 
-.beer-market-image article h2 {
-    color: gold;
-}
+        h2 {
+            color: gold;
+        }
 
-.beer-market-image article p {
-    margin-bottom: 2rem;
-    color: white;
-    opacity: 1;
-}
+        p {
+            margin-bottom: 2rem;
+            color: white;
+            opacity: 1;
+        }
 
-.beer-market-image article a {
-    background: transparent;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border: 1px solid white;
-    padding: 0.75rem;
-    transform: scale(1);
-    transition: 0.2s ease;
-    display: inline-block;
-}
+        a {
+            background: transparent;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            border: 1px solid white;
+            padding: 0.75rem;
+            transform: scale(1);
+            transition: 0.2s ease;
+            display: inline-block;
 
-.beer-market-image article a:hover {
-    border: 1px solid gold;
-    background-color: black;
-    color: gold;
-    transform: scale(1.075);
-    opacity: 1;
+            &:hover {
+                border: 1px solid gold;
+                background-color: black;
+                color: gold;
+                transform: scale(1.075);
+                opacity: 1;
+            }
+        }
+    }
 }
-
 
 /* Responsive */
 
@@ -176,8 +180,10 @@
         padding: 9rem 0;
     }
 
-    .intro-info  article {
-        padding: 1rem 3rem;
+    .intro-info {
+        article {
+            padding: 1rem 3rem;
+        }
     }
 }
 
@@ -199,8 +205,10 @@
         padding: 0;
     }
 
-    .intext ul li  {
-        width: 90%;
+    .intext {
+        li {
+            width: 90%;
+        }
     }
 }
 
