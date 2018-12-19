@@ -31,3 +31,14 @@ function onDocumentLoad(titleOfDocument) {
         textLimiter();
     }
 }
+
+// Navigation closer is used when resizing browser window to close the navbar.
+
+function navigationCloser() {
+    let width = Number(window.outerWidth);
+    let navCheckbox = document.getElementById("main-nav-toggle");
+
+    if (width > 980 && navCheckbox.checked === true) {
+        navCheckbox.checked = false;
+    }
+}

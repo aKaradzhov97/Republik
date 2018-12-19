@@ -10,12 +10,23 @@
         color: darkred;
     }
 
-    .dev-credits {
-        text-shadow: 0 0 15px #A40000;
-        text-decoration: none;
+    section {
+        
+    }
+
+    section:first-child {
+        width: 70%;
+        text-align: center;
+
+        .dev-credits {
+            text-shadow: 0 0 15px #A40000;
+            text-decoration: none;
+        }
     }
 
     section:last-child {
+        width: 30%;
+
         span {
             margin-right: 0.5rem
         }
@@ -49,6 +60,27 @@
         a.fa-google-plus-g:hover {
             color: #CC3333;
             transform: scale(1.35);
+        }
+    }
+}
+
+@media all and (max-width: 980px) {
+    .site-footer {
+        flex-direction: column;
+
+        section {
+            &:first-child,
+            &:last-child {
+                width: 100%;
+                display: block;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            &:first-child {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #f1f1f1;
+            }
         }
     }
 }
