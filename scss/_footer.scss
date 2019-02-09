@@ -10,10 +10,6 @@
         color: darkred;
     }
 
-    section {
-        
-    }
-
     section:first-child {
         width: 70%;
         text-align: center;
@@ -80,6 +76,10 @@
             &:first-child {
                 padding-bottom: 1rem;
                 border-bottom: 1px solid #f1f1f1;
+            }
+
+            &:last-child {
+                padding-top: 1rem;
             }
         }
     }

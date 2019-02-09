@@ -30,9 +30,8 @@
         color: white;
     }
 
-    span {
+    div {
         margin: 1rem;
-        display: block;
         position: relative;
         text-align: center;
         max-width: 15rem;
@@ -85,6 +84,26 @@
 
         #reserveTime {
             padding: 0.45rem 6.35rem 0.45rem 1.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .reserve {
+        div {
+            i {
+                top: 2.15rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .reserve {
+        div {
+            i {
+                top: 2.25rem;
+            }
         }
     }
 }
